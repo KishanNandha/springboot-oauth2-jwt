@@ -1,0 +1,9 @@
+install openssl
+
+keytool -genkey -alias kishan -keyalg RSA -keystore "mykeystore.jks"
+
+
+p:Kishan@123
+
+
+keytool -list -rfc --keystore mykeystore.jks | openssl x509 -inform pem -pubkey -noout

@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: auth-server
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://localhost/springboot_oauth2_jwt?autoreconnect=true'
+    password: root
+    username: root
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+    
+security:
+  jwt:
+    key-store: classpath:mykeystore.jks
+    key-store-password: Kishan@123
+    key-pair-alias: kishan
+    key-pair-password: Kishan@123
+
